@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#root {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
