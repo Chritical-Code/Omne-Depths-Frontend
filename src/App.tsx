@@ -1,5 +1,5 @@
-import Browse from "./Browse";
-import Header from "./Header";
+import Browse from "./pages/Browse";
+import Header from "./components/Header";
 
 export default function App(){
     return(
