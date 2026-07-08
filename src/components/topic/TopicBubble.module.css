@@ -1,0 +1,11 @@
+.topicBubble{
+    background-color: lightblue;
+
+    transform: translateX(-50vw);
+    animation: slide 10s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes slide {
+  to { transform: translateX(100vw); }
+}

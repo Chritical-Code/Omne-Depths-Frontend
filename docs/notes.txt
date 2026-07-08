@@ -1,7 +1,21 @@
 MVP - Minimum Viable Product
+(iterate, starting with the most obvious answer.)
 
 +browse page
--get a design going. iterate, starting with the most obvious answer.
+-header
+ .no solid line
+ .or maybe some transparency thing
+
+-oceany background
+ .it moves like an ocean
+
+-floating topics
+ .rows of topics
+  ,row component, takes in topics, does the heavy lifting
+  ,parent gets data, divies up into rows, spawns rows
+ .alternate left and right
+ .round robin
+ .can scroll down
 
 +topic page
 
