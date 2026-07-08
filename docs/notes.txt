@@ -1,7 +1,7 @@
 MVP - Minimum Viable Product
 
 +browse page
--get a design going. iterate with the most obvious answer.
+-get a design going. iterate, starting with the most obvious answer.
 
 +topic page
 
