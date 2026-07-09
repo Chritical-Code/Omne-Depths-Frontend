@@ -9,7 +9,10 @@ export default function Browse(){
         <div className="flex flex-col items-center h-full w-full p-2">
             <p>Browse</p>
 
-            <div className="w-full">
+            <div className="flex flex-col items-center w-full">
+                <TopicRow topics={topics}></TopicRow>
+                <TopicRow topics={topics}></TopicRow>
+                <TopicRow topics={topics}></TopicRow>
                 <TopicRow topics={topics}></TopicRow>
             </div>
         </div>

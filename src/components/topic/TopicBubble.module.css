@@ -2,10 +2,30 @@
     background-color: lightblue;
 
     transform: translateX(-50vw);
-    animation: slide 10s infinite;
+
+    animation-name: slide, waity;
+    animation-duration: 3s, 3s;
+    animation-iteration-count: infinite, infinite;
     animation-timing-function: linear;
+    animation-delay: 0s, 3s;
+
+    margin-right: 50vw;
 }
 
 @keyframes slide {
-  to { transform: translateX(100vw); }
+    0% { 
+        transform: translateX(-50vw);
+        opacity: 1;
+    }
+    
+    100% { 
+        transform: translateX(50vw);
+    }
+}
+
+@keyframes waity {
+    0%, 100% {
+        opacity: .5;
+        transform: translateX(50vw);
+    }
 }

@@ -13,7 +13,7 @@ export default function TopicRow({topics}: TopicRowProps){
     });
     
     return(
-        <div className={styles.topicRow}>
+        <div className={styles.topicRow + " " + "mb-8"}>
             {topicBoxes}
         </div>
     );

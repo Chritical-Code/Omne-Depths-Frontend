@@ -11,10 +11,11 @@ MVP - Minimum Viable Product
 
 -floating topics
  .rows of topics
-  ,row component, takes in topics, does the heavy lifting
   ,parent gets data, divies up into rows, spawns rows
- .alternate left and right
- .round robin
+ .animation
+  ,alternate left and right
+  ,round robin: two list method: 3 2 1 3 2 1, reset once last is hidden. also just scroll the whole row not the bubble. can use negative delay for different starting spots
+  ,bobbing
  .can scroll down
 
 +topic page

@@ -7,7 +7,7 @@ type TopicBubbleProps = {
 export default function TopicBubble({topic}: TopicBubbleProps){
     return(
         <div className={styles.topicBubble}>
-            <p>{topic}</p>
+            <p className="">{topic}</p>
         </div>
     );
 }
