@@ -12,6 +12,8 @@
     background-color: lightblue;
     will-change: transform;
 
+
+    transform: translateY(1rem);
     animation-name: bob;
     animation-duration: 4s;
     animation-iteration-count: infinite;

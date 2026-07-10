@@ -1,7 +1,11 @@
 nows:
-+bobbing
--attach a lil animation to each bubbel
 
++random bob
+.make 1 and 2 and 3 match their copies :)
+
++random slide
+
++make easy adjust values
 
 
 MVP - Minimum Viable Product
@@ -20,8 +24,8 @@ MVP - Minimum Viable Product
   ,parent gets data, divies up into rows, spawns rows
  .animation
   ,can use negative delay for different starting spots
-  ,bobbing
   ,different speed based on size (use md: or lg:?)
+  ,randomize bob delay and slide delay
  .can scroll down
 
 +topic page
