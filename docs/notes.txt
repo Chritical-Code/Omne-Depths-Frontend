@@ -1,3 +1,9 @@
+nows:
++bobbing
+-attach a lil animation to each bubbel
+
+
+
 MVP - Minimum Viable Product
 (iterate, starting with the most obvious answer.)
 
