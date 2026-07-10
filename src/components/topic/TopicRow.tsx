@@ -3,9 +3,10 @@ import styles from "./TopicRow.module.css";
 
 type TopicRowProps = {
     topics: string[],
+    direction?: string,
 }
 
-export default function TopicRow({topics}: TopicRowProps){
+export default function TopicRow({topics, direction: slide}: TopicRowProps){
     const doubleTopics = [...topics, ...topics];
     
     const topicBoxes = doubleTopics.map((topic, index) => {
@@ -15,7 +16,7 @@ export default function TopicRow({topics}: TopicRowProps){
     });
     
     return(
-        <div className={styles.topicRow}>
+        <div className={`${styles.topicRow} ${slide}`}>
             {topicBoxes}
         </div>
     );

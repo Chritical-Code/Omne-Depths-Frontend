@@ -13,9 +13,9 @@ MVP - Minimum Viable Product
  .rows of topics
   ,parent gets data, divies up into rows, spawns rows
  .animation
-  ,alternate left and right
-  ,round robin: two list method: 3 2 1 3 2 1, reset once last is hidden. also just scroll the whole row not the bubble. can use negative delay for different starting spots
+  ,can use negative delay for different starting spots
   ,bobbing
+  ,different speed based on size (use md: or lg:?)
  .can scroll down
 
 +topic page

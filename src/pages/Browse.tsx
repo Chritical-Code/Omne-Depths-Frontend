@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TopicRow from "../components/topic/TopicRow";
+import styles from "../components/topic/TopicRow.module.css";
 
 export default function Browse(){
     const [topics, setTopics] = useState<string[]>(["Topic 1", "Topic 2", "Topic 3"]);
@@ -10,10 +11,10 @@ export default function Browse(){
             <p>Browse</p>
 
             <div className="flex flex-col items-center w-full">
-                <TopicRow topics={topics}></TopicRow>
-                <TopicRow topics={topics}></TopicRow>
-                <TopicRow topics={topics}></TopicRow>
-                <TopicRow topics={topics}></TopicRow>
+                <TopicRow topics={topics} direction={styles.topicRowRight}></TopicRow>
+                <TopicRow topics={topics} direction={styles.topicRowLeft}></TopicRow>
+                <TopicRow topics={topics} direction={styles.topicRowRight}></TopicRow>
+                <TopicRow topics={topics} direction={styles.topicRowLeft}></TopicRow>
             </div>
         </div>
     );

@@ -1,6 +1,5 @@
-.topicRow{
+.topicRow {
     display: flex;
-    flex-direction: row-reverse;
     margin-bottom: 2rem;
 
     width: 100%;
@@ -8,18 +7,37 @@
 
     align-items: center;
 
-    animation-name: slide;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
-@keyframes slide {
+.topicRowRight {
+    flex-direction: row-reverse;
+    animation-name: slideRight;
+}
+
+@keyframes slideRight {
     0% { 
         transform: translateX(0vw);
     }
     
     100% { 
         transform: translateX(calc(150vw + (3 * 6rem)));
+    }
+}
+
+.topicRowLeft {
+    flex-direction: row;
+    animation-name: slideLeft;
+}
+
+@keyframes slideLeft {
+    0% { 
+        transform: translateX(50vw);
+    }
+    
+    100% { 
+        transform: translateX(calc(-1 * (150vw + (3 * 6rem)) + 50vw));
     }
 }
