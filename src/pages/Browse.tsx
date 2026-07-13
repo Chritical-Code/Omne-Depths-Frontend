@@ -3,6 +3,7 @@ import TopicRow from "../components/topic/TopicRow";
 import styles from "../components/topic/TopicRow.module.css";
 
 export default function Browse(){
+    // read topcis from database (eventually)
     const [topics, setTopics] = useState<string[]>(["Topic 1", "Topic 2", "Topic 3"]);
     
     return(
