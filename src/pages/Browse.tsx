@@ -7,12 +7,17 @@ export default function Browse(){
     const [topics, setTopics] = useState<string[]>(["Topic 1", "Topic 2", "Topic 3"]);
     
     return(
-        <div className="flex flex-col items-center h-full w-full p-2">
-            <div className="flex flex-col items-center w-full mt-4">
+        <div className="flex flex-col items-center h-full w-full">
+            <div className="flex flex-col items-center w-full overflow-y-scroll overflow-x-hidden">
                 <TopicRow topics={topics} direction={styles.topicRowRight}></TopicRow>
                 <TopicRow topics={topics} direction={styles.topicRowLeft}></TopicRow>
                 <TopicRow topics={topics} direction={styles.topicRowRight}></TopicRow>
                 <TopicRow topics={topics} direction={styles.topicRowLeft}></TopicRow>
+                <TopicRow topics={topics} direction={styles.topicRowRight}></TopicRow>
+                <TopicRow topics={topics} direction={styles.topicRowLeft}></TopicRow>
+                <TopicRow topics={topics} direction={styles.topicRowRight}></TopicRow>
+                <TopicRow topics={topics} direction={styles.topicRowLeft}></TopicRow>
+                <div className="w-1 h-22 shrink-0"></div>
             </div>
         </div>
     );

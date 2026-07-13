@@ -1,11 +1,8 @@
 nows:
 
-+random bob
-.make 1 and 2 and 3 match their copies :)
++make easy adjust values??
 
-+random slide
-
-+make easy adjust values
++replace randomness with mathematical beauty
 
 
 MVP - Minimum Viable Product
@@ -23,9 +20,7 @@ MVP - Minimum Viable Product
  .rows of topics
   ,parent gets data, divies up into rows, spawns rows
  .animation
-  ,can use negative delay for different starting spots
   ,different speed based on size (use md: or lg:?)
-  ,randomize bob delay and slide delay
  .can scroll down
 
 +topic page
