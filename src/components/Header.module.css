@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    height: 5rem;
+    align-items: center;
+    flex-shrink: 0;
+
+    background-image:   
+    linear-gradient(to left, rgb(0, 98, 190), rgb(0, 25, 49));
+
+    color: var(--primaryLight);
+    border-bottom: 1px solid var(--primaryLight);
+}

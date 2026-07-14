@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+:root {
+    --primary: rgb(0, 132, 255);
+    --primaryDark: rgb(0, 25, 49);
+    --primaryLight: rgb(157, 208, 255);
+}
+
 body {
     display: flex;
     width: 100vw;

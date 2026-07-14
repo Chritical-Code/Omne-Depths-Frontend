@@ -7,12 +7,13 @@
     width: 6rem;
     height: 4rem;
     flex-shrink: 0;
+
+    color: var(--primaryLight);
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 1px solid var(--primaryLight);
     border-radius: 4rem;
 
-    background-color: lightblue;
     will-change: transform;
-
-
     transform: translateY(1rem);
     animation-name: bob;
     animation-duration: 5s;

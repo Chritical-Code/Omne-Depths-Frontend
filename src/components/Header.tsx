@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import styles from "./Header.module.css";
 
 export default function Header(){
     return(
-        <div className="flex h-20 items-center bg-blue-400">
+        <div className={styles.header}>
             <div className="flex items-center h-full w-1/4 pl-2">
                 <Link to="/">Home</Link>
             </div>

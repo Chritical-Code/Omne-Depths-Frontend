@@ -1,8 +1,11 @@
 nows:
 
-+make easy adjust values??
 
-+replace randomness with mathematical beauty
++do colors
+-oceany background
+-make bubles better
+-make header better
+
 
 
 MVP - Minimum Viable Product
@@ -26,3 +29,10 @@ MVP - Minimum Viable Product
 +topic page
 
 +post page
+
+Visual Improvements
++make easy adjust values??
++replace randomness with mathematical beauty
++resizing completely breaks it
+-horizontal becomes off
+-weird vertical? snapping
