@@ -1,7 +1,12 @@
 nows:
 
-+topic page
--topics link to topic page
++create an actual backend
+-learn django rest
+-create database
+
++connect browse topics
+
++connect topic page
 
 
 MVP - Minimum Viable Product
