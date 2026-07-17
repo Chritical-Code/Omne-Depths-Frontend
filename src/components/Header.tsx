@@ -9,7 +9,7 @@ export default function Header(){
             </div>
 
             <div className="flex items-center h-full w-2/4">
-                <input className="border rounded-3xl h-10 w-full"></input>
+                <input className="border rounded-3xl h-10 w-full pl-2"></input>
             </div>
 
             <div className="flex items-center h-full w-1/4 justify-end pr-2">

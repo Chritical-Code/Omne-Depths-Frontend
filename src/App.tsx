@@ -2,6 +2,7 @@ import Browse from "./pages/Browse";
 import Header from "./components/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Profile from "./pages/Profile";
+import Topic from "./pages/Topic";
 
 export default function App(){
     return(
@@ -12,6 +13,7 @@ export default function App(){
                 <Routes>
                     <Route path="/" element={<Browse />} />
                     <Route path="/profile" element={<Profile />} />
+                    <Route path="/topic/:topic" element={<Topic />} />
                 </Routes>
             </div>
         </BrowserRouter>

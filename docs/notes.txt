@@ -1,5 +1,7 @@
 nows:
 
++topic page
+-topics link to topic page
 
 
 MVP - Minimum Viable Product
