@@ -1,30 +1,9 @@
 nows:
 
 
-+do colors
--oceany background
--make bubles better
--make header better
-
-
 
 MVP - Minimum Viable Product
 (iterate, starting with the most obvious answer.)
-
-+browse page
--header
- .no solid line
- .or maybe some transparency thing
-
--oceany background
- .it moves like an ocean
-
--floating topics
- .rows of topics
-  ,parent gets data, divies up into rows, spawns rows
- .animation
-  ,different speed based on size (use md: or lg:?)
- .can scroll down
 
 +topic page
 
@@ -36,3 +15,6 @@ Visual Improvements
 +resizing completely breaks it
 -horizontal becomes off
 -weird vertical? snapping
+-scrolls too fast on big screens
+-more advanced background (oceany)
+-overall design Improvements
