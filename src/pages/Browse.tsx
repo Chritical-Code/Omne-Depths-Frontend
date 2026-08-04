@@ -1,11 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TopicRow from "../components/topic/TopicRow";
 import topicRowStyles from "../components/topic/TopicRow.module.css";
 import browseRowStyles from "./Browse.module.css";
 
+type TopicT = {
+  topic: string;
+};
+
+type TopicResponse = {
+  count: number;
+  next: string | null;
+  previous: string | null;
+  results: TopicT[];
+};
+
 export default function Browse(){
     // read topcis from database (eventually)
     const [topics, setTopics] = useState<string[]>(["Topic 1", "Topic 2", "Topic 3"]);
+
+    useEffect(() => {
+        async function loadTopics() {
+            const res = await fetch("http://localhost:8000/topics/");
+            const data: TopicResponse = await res.json();
+
+            let makeTopics: string[] = []
+            data.results.forEach((dat) => {
+                makeTopics.push(dat.topic);
+            })
+
+            setTopics(makeTopics);
+        }
+
+        loadTopics();
+    }, []);
     
     return(
         <div className={browseRowStyles.oceanBackground}>

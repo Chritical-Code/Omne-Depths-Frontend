@@ -1,8 +1,6 @@
 nows:
 
-+create an actual backend
--learn django rest
--create database
++clean up my topic getter function
 
 +connect browse topics
 
