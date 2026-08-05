@@ -3,35 +3,11 @@ import TopicRow from "../components/topic/TopicRow";
 import topicRowStyles from "../components/topic/TopicRow.module.css";
 import browseRowStyles from "./Browse.module.css";
 
-type TopicT = {
-  topic: string;
-};
-
-type TopicResponse = {
-  count: number;
-  next: string | null;
-  previous: string | null;
-  results: TopicT[];
-};
-
 export default function Browse(){
-    // read topcis from database (eventually)
-    const [topics, setTopics] = useState<string[]>(["Topic 1", "Topic 2", "Topic 3"]);
+    const [topics, setTopics] = useState<string[]>([]);
 
     useEffect(() => {
-        async function loadTopics() {
-            const res = await fetch("http://localhost:8000/topics/");
-            const data: TopicResponse = await res.json();
-
-            let makeTopics: string[] = []
-            data.results.forEach((dat) => {
-                makeTopics.push(dat.topic);
-            })
-
-            setTopics(makeTopics);
-        }
-
-        loadTopics();
+        loadTopics(setTopics);
     }, []);
     
     return(
@@ -50,3 +26,27 @@ export default function Browse(){
         </div>
     );
 }
+
+//fetch topics from backend
+async function loadTopics(setTopics: Function){
+    const response = await fetch("http://localhost:8000/topics/");
+    const topicData: TopicData = await response.json();
+
+    let topicStrings: string[] = []
+    topicData.results.forEach((topicDatum) => {
+        topicStrings.push(topicDatum.topic);
+    })
+    
+    setTopics(topicStrings);
+}
+
+type Topic = {
+    topic: string;
+};
+
+type TopicData = {
+    count: number;
+    next: string | null;
+    previous: string | null;
+    results: Topic[];
+};

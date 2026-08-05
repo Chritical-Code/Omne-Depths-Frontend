@@ -1,10 +1,8 @@
 nows:
 
-+clean up my topic getter function
++implement actual variably lengthed topic number handling
 
-+connect browse topics
 
-+connect topic page
 
 
 MVP - Minimum Viable Product
