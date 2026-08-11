@@ -1,6 +1,7 @@
 nows:
 
 +implement actual variably lengthed topic number handling
+-fix this garbage
 
 
 

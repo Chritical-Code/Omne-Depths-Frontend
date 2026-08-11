@@ -1,26 +1,44 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import TopicRow from "../components/topic/TopicRow";
 import topicRowStyles from "../components/topic/TopicRow.module.css";
 import browseRowStyles from "./Browse.module.css";
 
 export default function Browse(){
-    const [topics, setTopics] = useState<string[]>([]);
+    const [topics, setTopics] = useState<Topic[]>([{name: "", id: 0}]);
 
     useEffect(() => {
         loadTopics(setTopics);
     }, []);
+
+    //break topics into rows of 3
+    let sortedTopics: Topic[][] = []
+    let y = 0;
+    while(y < topics.length){
+        let x = 0;
+        let tempRow: Topic[] = []
+
+        while(x < 3){
+            if(y >= topics.length){
+                break;
+            }
+            tempRow.push(topics[y])
+            x++;
+            y++;
+        }
+
+        sortedTopics.push(tempRow);
+    }
+
+    const topicRows = sortedTopics.map((topicRow, index) => {
+        return(
+            <TopicRow topics={topicRow} key={index} direction={topicRowStyles.topicRowRight}></TopicRow>
+        );
+    });
     
     return(
         <div className={browseRowStyles.oceanBackground}>
             <div className="flex flex-col items-center w-full overflow-y-scroll overflow-x-hidden">
-                <TopicRow topics={topics} direction={topicRowStyles.topicRowRight}></TopicRow>
-                <TopicRow topics={topics} direction={topicRowStyles.topicRowLeft}></TopicRow>
-                <TopicRow topics={topics} direction={topicRowStyles.topicRowRight}></TopicRow>
-                <TopicRow topics={topics} direction={topicRowStyles.topicRowLeft}></TopicRow>
-                <TopicRow topics={topics} direction={topicRowStyles.topicRowRight}></TopicRow>
-                <TopicRow topics={topics} direction={topicRowStyles.topicRowLeft}></TopicRow>
-                <TopicRow topics={topics} direction={topicRowStyles.topicRowRight}></TopicRow>
-                <TopicRow topics={topics} direction={topicRowStyles.topicRowLeft}></TopicRow>
+                {topicRows}
                 <div className="w-1 h-22 shrink-0"></div>
             </div>
         </div>
@@ -32,16 +50,17 @@ async function loadTopics(setTopics: Function){
     const response = await fetch("http://localhost:8000/topics/");
     const topicData: TopicData = await response.json();
 
-    let topicStrings: string[] = []
+    let topics: Topic[] = []
     topicData.results.forEach((topicDatum) => {
-        topicStrings.push(topicDatum.topic);
+        topics.push(topicDatum);
     })
     
-    setTopics(topicStrings);
+    setTopics(topics);
 }
 
 type Topic = {
-    topic: string;
+    name: string;
+    id: number;
 };
 
 type TopicData = {

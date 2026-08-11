@@ -1,8 +1,13 @@
 import TopicBubble from "./TopicBubble";
 import styles from "./TopicRow.module.css";
 
+type Topic = {
+    name: string;
+    id: number;
+};
+
 type TopicRowProps = {
-    topics: string[],
+    topics: Topic[],
     direction?: string,
 }
 
@@ -22,7 +27,7 @@ export default function TopicRow({topics, direction: slide}: TopicRowProps){
     
     const topicBoxes = doubleTopics.map((topic, index) => {
         return(
-            <TopicBubble key={index} topic={topic} bobDelay={bobDelay[index]}></TopicBubble>
+            <TopicBubble key={topic.id} topic={topic.name} bobDelay={bobDelay[index]}></TopicBubble>
         );
     });
     
