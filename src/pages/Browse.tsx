@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import TopicRow from "../components/topic/TopicRow";
 import topicRowStyles from "../components/topic/TopicRow.module.css";
 import browseRowStyles from "./Browse.module.css";
 
 export default function Browse(){
-    const [topics, setTopics] = useState<Topic[]>([{name: "", id: 0}]);
+    const [topics, setTopics] = useState<Topic[]>([{name: "testemoptytopic", id: -1}]);
 
     useEffect(() => {
         loadTopics(setTopics);
@@ -56,6 +56,7 @@ async function loadTopics(setTopics: Function){
     })
     
     setTopics(topics);
+    console.log("topicData.results", topicData.results);
 }
 
 type Topic = {
