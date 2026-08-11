@@ -10,7 +10,7 @@ export default function Browse(){
         loadTopics(setTopics);
     }, []);
 
-    //break topics into rows of 3
+    //group topics into rows of 3
     let groupedTopics: Topic[][] = []
     let topicIndex = 0;
     while(topicIndex < topics.length){
