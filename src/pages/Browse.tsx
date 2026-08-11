@@ -11,25 +11,23 @@ export default function Browse(){
     }, []);
 
     //break topics into rows of 3
-    let sortedTopics: Topic[][] = []
-    let y = 0;
-    while(y < topics.length){
-        let x = 0;
+    let groupedTopics: Topic[][] = []
+    let topicIndex = 0;
+    while(topicIndex < topics.length){
         let tempRow: Topic[] = []
-
-        while(x < 3){
-            if(y >= topics.length){
+        let rowItemCounter = 0;
+        while(rowItemCounter < 3){
+            if(topicIndex >= topics.length){
                 break;
             }
-            tempRow.push(topics[y])
-            x++;
-            y++;
+            tempRow.push(topics[topicIndex])
+            rowItemCounter++;
+            topicIndex++;
         }
-
-        sortedTopics.push(tempRow);
+        groupedTopics.push(tempRow);
     }
 
-    const topicRows = sortedTopics.map((topicRow, index) => {
+    const topicRows = groupedTopics.map((topicRow, index) => {
         return(
             <TopicRow topics={topicRow} key={index} direction={topicRowStyles.topicRowRight}></TopicRow>
         );

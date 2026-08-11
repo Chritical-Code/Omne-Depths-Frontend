@@ -1,8 +1,5 @@
 nows:
 
-+implement actual variably lengthed topic number handling
--make the code less messy
-
 
 
 
