@@ -1,11 +1,20 @@
-nows:
-
-
-
-
 MVP - Minimum Viable Product
 (iterate, starting with the most obvious answer.)
 
+
+
+Nows:
++topic page
+-generates posts
+-displays posts
+
++post page
+-shows post
+
+
+
+
+Futures:
 +topic page
 
 +post page
