@@ -38,6 +38,6 @@
     }
     
     100% { 
-        transform: translateX(calc(-1 * (150vw + (3 * 6rem)) + 50vw));
+        transform: translateX(calc(-3 * (50vw + 6rem) + 50vw));
     }
 }

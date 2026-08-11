@@ -12,8 +12,14 @@ type TopicRowProps = {
 }
 
 export default function TopicRow({topics, direction: slide}: TopicRowProps){
+    // raise topics count to correct number
+    let raisedTopics = [...topics];
+    while(raisedTopics.length < 3){
+        raisedTopics.push(raisedTopics[0]);
+    }
+    
     // double the array to help simulate round robin
-    const doubleTopics = [...topics, ...topics];
+    const doubleTopics = [...raisedTopics, ...raisedTopics];
     
     // generate delays so animations are offset
     let bobDelay: number[] = []

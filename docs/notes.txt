@@ -1,9 +1,6 @@
 nows:
 
 +implement actual variably lengthed topic number handling
--short rows dont work
-.quickfix: arbitrarily lengthen until working
-.realfix: add support for variable row legnths
 -make the code less messy
 
 
