@@ -1,10 +1,6 @@
 import TopicBubble from "./TopicBubble";
 import styles from "./TopicRow.module.css";
-
-type Topic = {
-    name: string;
-    id: number;
-};
+import type {Topic} from "@/types/types";
 
 type TopicRowProps = {
     topics: Topic[],

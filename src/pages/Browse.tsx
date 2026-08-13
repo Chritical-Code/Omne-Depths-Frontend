@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import TopicRow from "../components/topic/TopicRow";
 import topicRowStyles from "../components/topic/TopicRow.module.css";
 import browseRowStyles from "./Browse.module.css";
+import type {Topic, TopicData} from "@/types/types";
 
 export default function Browse(){
-    const [topics, setTopics] = useState<Topic[]>([{name: "testemoptytopic", id: -1}]);
+    const [topics, setTopics] = useState<Topic[]>([{name: "topic", id: -1}]);
 
     useEffect(() => {
         loadTopics(setTopics);
@@ -56,15 +57,3 @@ async function loadTopics(setTopics: Function){
     setTopics(topics);
     console.log("topicData.results", topicData.results);
 }
-
-type Topic = {
-    name: string;
-    id: number;
-};
-
-type TopicData = {
-    count: number;
-    next: string | null;
-    previous: string | null;
-    results: Topic[];
-};
