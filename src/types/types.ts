@@ -9,3 +9,17 @@ export type TopicData = {
     previous: string | null;
     results: Topic[];
 };
+
+export type Post = {
+    id: number,
+    topic: number,
+    title: string,
+    text: string,
+}
+
+export type PostData = {
+    count: number;
+    next: string | null;
+    previous: string | null;
+    results: Post[];
+};

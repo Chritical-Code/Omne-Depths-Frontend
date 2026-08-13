@@ -55,5 +55,4 @@ async function loadTopics(setTopics: Function){
     })
     
     setTopics(topics);
-    console.log("topicData.results", topicData.results);
 }

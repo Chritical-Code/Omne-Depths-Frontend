@@ -5,8 +5,8 @@ MVP - Minimum Viable Product
 
 Nows:
 +topic page
--generates posts
 -displays posts
+-generates posts
 
 +post page
 -shows post
