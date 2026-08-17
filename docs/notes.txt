@@ -6,6 +6,8 @@ MVP - Minimum Viable Product
 Nows:
 +topic page
 -displays posts
+.use builtin viewset method to pull a specific post
+.plan a smart way to filter by topic
 -generates posts
 
 +post page

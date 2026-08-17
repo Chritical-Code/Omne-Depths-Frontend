@@ -8,7 +8,7 @@ export default function Topic(){
     const {topic} = useParams();
 
     useEffect(() => {
-            //loadPosts(setPosts);
+            loadPosts(setPosts);
     }, []);
 
     //create post boxes
