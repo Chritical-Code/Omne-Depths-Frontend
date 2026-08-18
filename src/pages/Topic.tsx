@@ -4,11 +4,11 @@ import type { Post, PostData } from "@/types/types";
 import PostBox from "@/components/post/PostBox";
 
 export default function Topic(){
-    const [posts, setPosts] = useState<Post[]>([{id: -1, topic: -1, title: "Title", text:"text"}]);
+    const [posts, setPosts] = useState<Post[]>([]);
     const {topic} = useParams();
 
     useEffect(() => {
-            loadPosts(setPosts);
+            loadPosts(setPosts, topic ?? "-1");
     }, []);
 
     //create post boxes
@@ -27,8 +27,8 @@ export default function Topic(){
 }
 
 //fetch posts from backend
-async function loadPosts(setPosts: Function){
-    const response = await fetch("http://localhost:8000/posts/");
+async function loadPosts(setPosts: Function, topic: string){
+    const response = await fetch("http://localhost:8000/test/" + topic + "/");
     const postData: PostData = await response.json();
 
     let posts: Post[] = []

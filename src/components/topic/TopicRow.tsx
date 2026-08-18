@@ -29,7 +29,7 @@ export default function TopicRow({topics, direction: slide}: TopicRowProps){
     
     const topicBoxes = doubleTopics.map((topic, index) => {
         return(
-            <TopicBubble key={index} topic={topic.name} bobDelay={bobDelay[index]}></TopicBubble>
+            <TopicBubble key={index} topic={topic} bobDelay={bobDelay[index]}></TopicBubble>
         );
     });
     
