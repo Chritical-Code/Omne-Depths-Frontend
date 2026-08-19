@@ -20,7 +20,7 @@ export default function Topic(){
 
     return(
         <div className="flex flex-col items-center h-full w-full">
-            <p className="ml-2">Topic: {topic}</p>
+            <p className="ml-2 font-bold">{topic}</p>
             {postBoxes}
         </div>
     );

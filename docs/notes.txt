@@ -6,8 +6,6 @@ MVP - Minimum Viable Product
 Nows:
 +topic page
 -displays posts
-.shows right topic at top, rather than topic id
-.consider showing topic name in url rather than id
 .use builtin viewset method to pull a specific post
 -generates posts
 
