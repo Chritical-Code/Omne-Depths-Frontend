@@ -28,7 +28,7 @@ export default function Topic(){
 
 //fetch posts from backend
 async function loadPosts(setPosts: Function, topic: string){
-    const response = await fetch("http://localhost:8000/test/" + topic + "/");
+    const response = await fetch("http://localhost:8000/postsbytopic/" + topic + "/");
     const postData: PostData = await response.json();
 
     let posts: Post[] = []
