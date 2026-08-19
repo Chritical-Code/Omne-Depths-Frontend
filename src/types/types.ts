@@ -11,7 +11,7 @@ export type TopicData = {
 };
 
 export type Post = {
-    id: number,
+    id: string,
     topic: number,
     title: string,
     text: string,
