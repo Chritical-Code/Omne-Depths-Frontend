@@ -11,9 +11,8 @@ Nows:
 
 
 Futures:
-+topic page
++post not found
 
-+post page
 
 Visual Improvements
 +make easy adjust values??
