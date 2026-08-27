@@ -4,8 +4,13 @@ MVP - Minimum Viable Product
 
 
 Nows:
-+topic page
--generates posts
++generate topics
+-button that generates topics
+
+
++content generation
+-generate posts
+-generate topics
 
 
 
