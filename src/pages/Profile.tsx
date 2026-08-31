@@ -2,7 +2,6 @@ import type { Topic, TopicData } from "@/types/types";
 
 export default function Profile(){
     function handleClick(){
-        console.log("clicky");
         loadTopics();
     }
     
