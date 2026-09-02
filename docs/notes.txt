@@ -4,19 +4,22 @@ MVP - Minimum Viable Product
 
 
 Nows:
-+generate topics
--button that generates topics
 
 
 +content generation
 -generate posts
--generate topics
+.figure out a format for posts
 
++post format info:
+-writing style: multiple 'authors'
+-format: title, description content
+-length: 3 paragraphs?
 
 
 
 Futures:
 +post not found
++generate new topics by searching
 
 
 Visual Improvements
