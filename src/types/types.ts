@@ -14,6 +14,7 @@ export type Post = {
     id: string,
     topic: number,
     title: string,
+    description: string,
     text: string,
 }
 

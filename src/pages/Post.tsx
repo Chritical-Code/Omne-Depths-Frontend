@@ -13,6 +13,7 @@ export default function Post(){
     return(
         <div className="flex flex-col items-center w-full h-full">
             <p className="font-bold">{post?.title}</p>
+            <p className="italic">{post?.description}</p>
             <p>{post?.text}</p>
         </div>
     );

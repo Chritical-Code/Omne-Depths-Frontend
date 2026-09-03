@@ -5,21 +5,22 @@ MVP - Minimum Viable Product
 
 Nows:
 
++make bubbles fit longer text
 
 +content generation
 -generate posts
 .figure out a format for posts
 
 +post format info:
--writing style: multiple 'authors'
 -format: title, description content
--length: 3 paragraphs?
+-length: 3 paragraphs
 
 
 
 Futures:
 +post not found
 +generate new topics by searching
++adjust writing style (multiple authors?)
 
 
 Visual Improvements
