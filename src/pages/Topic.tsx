@@ -11,6 +11,10 @@ export default function Topic(){
             loadPosts(setPosts, topic ?? "-1");
     }, []);
 
+    function handleClick(){
+        generatePosts(topic ?? "");
+    }
+
     //create post boxes
     const postBoxes = posts.map((post) => {
         return(
@@ -22,6 +26,8 @@ export default function Topic(){
         <div className="flex flex-col items-center h-full w-full">
             <p className="ml-2 font-bold">{topic}</p>
             {postBoxes}
+
+            <button className="btn w-25 h-15" onClick={() => handleClick()}>Generate Posts</button>
         </div>
     );
 }
@@ -37,4 +43,17 @@ async function loadPosts(setPosts: Function, topic: string){
     })
     
     setPosts(posts);
+}
+
+//generate posts at backend
+async function generatePosts(topic: string){
+    const response = await fetch("http://localhost:8000/generateposts/" + topic + "/");
+    const postData: PostData = await response.json();
+
+    let posts: Post[] = []
+    postData.results.forEach((postDatum) => {
+        posts.push(postDatum);
+    })
+    
+    console.log(posts);
 }

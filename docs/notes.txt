@@ -7,9 +7,10 @@ Nows:
 
 +make bubbles fit longer text
 
++replace postbox text with post description.
+
 +content generation
 -generate posts
-.figure out a format for posts
 
 +post format info:
 -format: title, description content

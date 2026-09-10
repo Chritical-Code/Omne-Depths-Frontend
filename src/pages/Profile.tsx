@@ -2,7 +2,7 @@ import type { Topic, TopicData } from "@/types/types";
 
 export default function Profile(){
     function handleClick(){
-        loadTopics();
+        generateTopics();
     }
     
     return(
@@ -13,8 +13,8 @@ export default function Profile(){
     );
 }
 
-//fetch topics from backend
-async function loadTopics(){
+//generate topics at backend
+async function generateTopics(){
     const response = await fetch("http://localhost:8000/generatetopics/");
     const topicData: TopicData = await response.json();
 

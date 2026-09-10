@@ -11,10 +11,13 @@ export default function Post(){
         }, []);
 
     return(
-        <div className="flex flex-col items-center w-full h-full">
-            <p className="font-bold">{post?.title}</p>
-            <p className="italic">{post?.description}</p>
-            <p>{post?.text}</p>
+        <div className="flex flex-col items-center w-full h-full overflow-y-scroll">
+            <div className="flex flex-col items-center w-90 md:w-180">
+                <p className="font-bold mt-2 text-center">{post?.title}</p>
+                <p className="italic mt-4 text-center">{post?.description}</p>
+                <p className="whitespace-pre-line mt-4">{post?.text}</p>
+                <div className="flex w-10 h-10 shrink-0"></div>
+            </div>
         </div>
     );
 }
