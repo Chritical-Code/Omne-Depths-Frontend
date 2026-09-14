@@ -5,14 +5,17 @@ import PostBox from "@/components/post/PostBox";
 
 export default function Topic(){
     const [posts, setPosts] = useState<Post[]>([]);
+    const [loading, setLoading] = useState(false);
     const {topic} = useParams();
 
     useEffect(() => {
             loadPosts(setPosts, topic ?? "-1");
     }, []);
 
-    function handleClick(){
-        generatePosts(topic ?? "", setPosts, posts);
+    async function handleClick(){
+        setLoading(true);
+        await generatePosts(topic ?? "", setPosts, posts);
+        setLoading(false);
     }
 
     // create post boxes
@@ -28,7 +31,9 @@ export default function Topic(){
             
             {postBoxes}
 
-            <button className="btn w-25 h-15" onClick={() => handleClick()}>Generate Posts</button>
+            <button className={`btn w-25 h-15 ${loading ? "opacity-50 cursor-not-allowed" : ""}`} disabled={loading} onClick={() => handleClick()}>
+                {loading ? "Generating..." : "Generate Posts"}
+            </button>
         </div>
     );
 }
@@ -56,5 +61,5 @@ async function generatePosts(topic: string, setPosts: Function, oldPosts: Post[]
         newPosts.push(postDatum);
     })
     
-    setPosts([...newPosts, ...oldPosts]);
+    setPosts([...oldPosts, ...newPosts]);
 }

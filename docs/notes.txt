@@ -5,10 +5,6 @@ MVP - Minimum Viable Product
 
 Nows:
 
-+generate button shows newly generated posts
--and perhaps a progress bar
--and perhaps we disable the button so no spamming
-
 +make bubbles fit longer text
 
 +redesign postboxes
