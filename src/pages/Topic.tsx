@@ -12,10 +12,10 @@ export default function Topic(){
     }, []);
 
     function handleClick(){
-        generatePosts(topic ?? "");
+        generatePosts(topic ?? "", setPosts, posts);
     }
 
-    //create post boxes
+    // create post boxes
     const postBoxes = posts.map((post) => {
         return(
             <PostBox post={post} key={post.id}></PostBox>
@@ -23,8 +23,9 @@ export default function Topic(){
     });
 
     return(
-        <div className="flex flex-col items-center h-full w-full">
+        <div className="flex flex-col items-center h-full w-full overflow-y-scroll">
             <p className="ml-2 font-bold">{topic}</p>
+            
             {postBoxes}
 
             <button className="btn w-25 h-15" onClick={() => handleClick()}>Generate Posts</button>
@@ -32,7 +33,7 @@ export default function Topic(){
     );
 }
 
-//fetch posts from backend
+// fetch posts from backend
 async function loadPosts(setPosts: Function, topic: string){
     const response = await fetch("http://localhost:8000/postsbytopic/" + topic + "/");
     const postData: PostData = await response.json();
@@ -45,15 +46,15 @@ async function loadPosts(setPosts: Function, topic: string){
     setPosts(posts);
 }
 
-//generate posts at backend
-async function generatePosts(topic: string){
+// generate posts at backend
+async function generatePosts(topic: string, setPosts: Function, oldPosts: Post[]){
     const response = await fetch("http://localhost:8000/generateposts/" + topic + "/");
     const postData: PostData = await response.json();
 
-    let posts: Post[] = []
+    let newPosts: Post[] = []
     postData.results.forEach((postDatum) => {
-        posts.push(postDatum);
+        newPosts.push(postDatum);
     })
     
-    console.log(posts);
+    setPosts([...newPosts, ...oldPosts]);
 }

@@ -5,16 +5,14 @@ MVP - Minimum Viable Product
 
 Nows:
 
++generate button shows newly generated posts
+-and perhaps a progress bar
+-and perhaps we disable the button so no spamming
+
 +make bubbles fit longer text
 
-+replace postbox text with post description.
-
-+content generation
--generate posts
-
-+post format info:
--format: title, description content
--length: 3 paragraphs
++redesign postboxes
+-make text fit
 
 
 
@@ -30,6 +28,6 @@ Visual Improvements
 +resizing completely breaks it
 -horizontal becomes off
 -weird vertical? snapping
--scrolls too fast on big screens
--more advanced background (oceany)
--overall design Improvements
++scrolls too fast on big screens
++more advanced background (oceany)
++overall design Improvements
