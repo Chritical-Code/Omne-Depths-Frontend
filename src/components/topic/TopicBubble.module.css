@@ -19,6 +19,8 @@
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+
+    overflow: hidden;
 }
 
 @keyframes bob {
@@ -33,4 +35,8 @@
     100% { 
         transform: translateY(2rem);
     }
+}
+
+.topicText{
+    display: flex;
 }
