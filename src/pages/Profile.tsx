@@ -2,13 +2,13 @@ import type { Topic, TopicData } from "@/types/types";
 
 export default function Profile(){
     function handleClick(){
-        generateTopics();
+        //generateTopics();
     }
     
     return(
         <div className="flex flex-col items-center h-full w-full">
             <p className="">Profile</p>
-            <button className="btn w-25 h-15" onClick={() => handleClick()}>Generate Topics</button>
+            <button disabled className="btn w-25 h-15" onClick={() => handleClick()}>Generate Topics</button>
         </div>
     );
 }
