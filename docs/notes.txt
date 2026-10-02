@@ -5,6 +5,9 @@ MVP - Minimum Viable Product
 
 Nows:
 
++make search work
+-topic search
+
 +make bubbles fit longer text
 
 +redesign postboxes
@@ -16,6 +19,7 @@ Futures:
 +post not found
 +generate new topics by searching
 +adjust writing style (multiple authors?)
++add post search
 
 
 Visual Improvements

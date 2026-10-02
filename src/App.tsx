@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Profile from "./pages/Profile";
 import Topic from "./pages/Topic";
 import Post from "./pages/Post";
+import Search from "./pages/Search";
 
 export default function App(){
     return(
@@ -16,6 +17,7 @@ export default function App(){
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/topic/:topic" element={<Topic />} />
                     <Route path="/post/:postID" element={<Post />} />
+                    <Route path="/search" element={<Search />} />
                 </Routes>
             </div>
         </BrowserRouter>
