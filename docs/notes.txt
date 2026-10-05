@@ -20,6 +20,7 @@ Futures:
 +generate new topics by searching
 +adjust writing style (multiple authors?)
 +add post search
++remove spaces from links (like a topic with a space in it) (unless its doing the auto hide thing)
 
 
 Visual Improvements
