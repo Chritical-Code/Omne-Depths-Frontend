@@ -1,7 +1,7 @@
 import { useSearchParams } from 'react-router-dom';
 
 export default function Search(){
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
 
     const searchQuery = searchParams.get("q") || "";
 

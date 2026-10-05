@@ -2,7 +2,8 @@ import type { Topic, TopicData } from "@/types/types";
 
 export default function Profile(){
     function handleClick(){
-        //generateTopics();
+        return;
+        generateTopics();
     }
     
     return(
