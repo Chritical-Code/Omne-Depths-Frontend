@@ -4,6 +4,7 @@ MVP - Minimum Viable Product
 
 
 Nows:
+
 +search
 -design result components (and make into actual component)
 -find any other problems

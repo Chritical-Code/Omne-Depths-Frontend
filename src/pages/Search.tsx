@@ -9,7 +9,7 @@ export default function Search(){
     
     useEffect(() => {
         loadTopics(setTopics, searchQuery);
-    }, []);
+    }, [searchQuery]);
 
     const mappedTopics = topics.map((topic) => {
         return(
