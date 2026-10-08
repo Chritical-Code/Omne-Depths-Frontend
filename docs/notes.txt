@@ -4,9 +4,11 @@ MVP - Minimum Viable Product
 
 
 Nows:
-
-+make search work
--topic search
++search
+-design result components (and make into actual component)
+-might need to set the search text to match the url if i open it as a new link
+-find any other problems
+-maybe use this opportunity to write some tests
 
 +make bubbles fit longer text
 
