@@ -1,3 +1,4 @@
+import TopicBox from "@/components/topic/TopicBox";
 import type { Topic, TopicData } from "@/types/types";
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from 'react-router-dom';
@@ -13,19 +14,13 @@ export default function Search(){
 
     const mappedTopics = topics.map((topic) => {
         return(
-            <div key={topic.id} className="flex items-center w-40 h-10 border mb-1 bg-amber-200">
-                <Link to={"/topic/" + topic.name}
-                className="flex w-full h-full shrink-0 items-center justify-center">
-                    <p className="">{topic.name}</p>
-                </Link>
-            </div>
+            <TopicBox topic={topic}></TopicBox>
         );
     });
 
     return(
         <div className="flex flex-col items-center">
-            <p className="font-bold">Search Page</p>
-            <p>Searched: {searchQuery}</p>
+            <p className="font-bold">Search Results:</p>
             {mappedTopics}
         </div>
     );
