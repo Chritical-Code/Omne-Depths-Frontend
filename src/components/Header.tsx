@@ -1,8 +1,10 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import styles from "./Header.module.css";
 
 export default function Header(){
     const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+    const searchQuery = searchParams.get("q") || "";
 
     function handleSearch(e: React.SubmitEvent<HTMLFormElement>){
         e.preventDefault();
@@ -23,7 +25,7 @@ export default function Header(){
 
             <div className="flex items-center h-full w-2/4">
                 <form onSubmit={handleSearch} className="flex items-center h-full w-full">
-                    <input name="q" className="border rounded-3xl h-10 w-full pl-2" ></input>
+                    <input name="q" className="border rounded-3xl h-10 w-full pl-2" defaultValue={searchQuery} ></input>
                 </form>
             </div>
 
