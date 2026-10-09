@@ -1,7 +1,7 @@
 import TopicBox from "@/components/topic/TopicBox";
 import type { Topic, TopicData } from "@/types/types";
 import { useEffect, useState } from "react";
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 export default function Search(){
     const [topics, setTopics] = useState<Topic[]>([{name: "topic", id: -1}]);

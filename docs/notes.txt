@@ -18,6 +18,7 @@ Nows:
 
 
 Futures:
++add a generation failed system
 +post not found
 +generate new topics by searching
 +adjust writing style (multiple authors?)
