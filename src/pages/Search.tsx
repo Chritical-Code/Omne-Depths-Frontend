@@ -20,7 +20,7 @@ export default function Search(){
 
     return(
         <div className="flex flex-col items-center">
-            <p className="font-bold">Search Results:</p>
+            <p className="font-bold">Topic Search Results:</p>
             {mappedTopics}
         </div>
     );
