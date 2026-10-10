@@ -5,6 +5,12 @@ MVP - Minimum Viable Product
 
 Nows:
 
++make topic bubbles universal
+-seperate animation from bubble component
+-use bubbles with search
+
++enable tailwind to use my css variables
+
 +search
 -design result components (and make into actual component)
 -find any other problems
@@ -23,7 +29,8 @@ Futures:
 +generate new topics by searching
 +adjust writing style (multiple authors?)
 +add post search
-+remove spaces from links (like a topic with a space in it) (unless its doing the auto hide thing)
++add ai disclaimer
++link back to topic from post
 
 
 Visual Improvements

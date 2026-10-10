@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 50vw;
 
     width: 6rem;
     height: 4rem;
@@ -12,31 +11,5 @@
     background-color: rgba(255, 255, 255, 0.10);
     border: 1px solid var(--primaryLight);
     border-radius: 4rem;
-
-    will-change: transform;
-    transform: translateY(1rem);
-    animation-name: bob;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-
     overflow: hidden;
-}
-
-@keyframes bob {
-    0% { 
-        transform: translateY(2rem);
-    }
-
-    50% {
-        transform: translateY(-2rem);
-    }
-    
-    100% { 
-        transform: translateY(2rem);
-    }
-}
-
-.topicText{
-    display: flex;
 }

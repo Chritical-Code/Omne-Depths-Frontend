@@ -1,7 +1,8 @@
-import TopicBox from "@/components/topic/TopicBox";
+import TopicBubble from "@/components/topic/TopicBubble";
 import type { Topic, TopicData } from "@/types/types";
 import { useEffect, useState } from "react";
 import { useSearchParams } from 'react-router-dom';
+import browseStyles from "./Browse.module.css";
 
 export default function Search(){
     const [topics, setTopics] = useState<Topic[]>([{name: "topic", id: -1}]);
@@ -14,13 +15,16 @@ export default function Search(){
 
     const mappedTopics = topics.map((topic) => {
         return(
-            <TopicBox topic={topic}></TopicBox>
+            <>
+                <div className="h-2 w-2 shrink-0"></div>
+                <TopicBubble topic={topic}></TopicBubble>
+            </>
         );
     });
 
     return(
-        <div className="flex flex-col items-center">
-            <p className="font-bold">Topic Search Results:</p>
+        <div className={browseStyles.oceanBackground}>
+            <p className="font-bold text-blue-200">Topic Search Results:</p>
             {mappedTopics}
         </div>
     );

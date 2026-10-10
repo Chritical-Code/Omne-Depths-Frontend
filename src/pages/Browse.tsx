@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import TopicRow from "../components/topic/TopicRow";
 import topicRowStyles from "../components/topic/TopicRow.module.css";
-import browseRowStyles from "./Browse.module.css";
+import browseStyles from "./Browse.module.css";
 import type {Topic, TopicData} from "@/types/types";
 
 export default function Browse(){
@@ -35,7 +35,7 @@ export default function Browse(){
     });
     
     return(
-        <div className={browseRowStyles.oceanBackground}>
+        <div className={browseStyles.oceanBackground}>
             <div className="flex flex-col items-center w-full overflow-y-scroll overflow-x-hidden">
                 {topicRows}
                 <div className="w-1 h-22 shrink-0"></div>

@@ -1,4 +1,4 @@
-import TopicBubble from "./TopicBubble";
+import TopicAnimator from "./TopicAnimator";
 import styles from "./TopicRow.module.css";
 import type {Topic} from "@/types/types";
 
@@ -29,7 +29,7 @@ export default function TopicRow({topics, direction: slide}: TopicRowProps){
     
     const topicBoxes = doubleTopics.map((topic, index) => {
         return(
-            <TopicBubble key={index} topic={topic} bobDelay={bobDelay[index]}></TopicBubble>
+            <TopicAnimator key={index} topic={topic} bobDelay={bobDelay[index]}></TopicAnimator>
         );
     });
     

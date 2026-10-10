@@ -6,6 +6,12 @@
     --primaryLight: rgb(157, 208, 255);
 }
 
+@theme {
+    --primary: var(--primary);
+    --primaryDark: var(--primaryDark);
+    --primaryLight: var(--primaryLight);
+}
+
 body {
     display: flex;
     width: 100vw;
@@ -19,7 +25,7 @@ body {
     height: 100%;
 }
 
-@layer components{
+@layer components {
     .btn{
         @apply flex items-center justify-center shrink-0 m-1 border h-10 w-20 
         bg-gray-200 hover:bg-gray-100 hover:border-gray-600 hover:text-gray-600 hover:cursor-pointer
