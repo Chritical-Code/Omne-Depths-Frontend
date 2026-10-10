@@ -4,21 +4,18 @@ MVP - Minimum Viable Product
 
 
 Nows:
-
-+make topic bubbles universal
--seperate animation from bubble component
--use bubbles with search
-
 +enable tailwind to use my css variables
 
-+search
--design result components (and make into actual component)
++search page
+-redesign page
 -find any other problems
 -maybe use this opportunity to write some tests
 
 +make bubbles fit longer text
 
-+redesign postboxes
++topic page
+-redesign page
+-redesign postboxes
 -make text fit
 
 
