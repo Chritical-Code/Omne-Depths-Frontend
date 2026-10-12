@@ -10,8 +10,8 @@ export default function TopicBubble({topic}: TopicBubbleProps){
     return(
         <div className={styles.topicBubble}>
             <Link to={"/topic/" + topic.name}
-            className="flex w-full h-full shrink-0 items-center justify-center">
-                <p className="">{topic.name}</p>
+            className="flex w-9/10 h-9/10 shrink-0 items-center">
+                <p className="whitespace-nowrap text-center w-full">{topic.name}</p>
             </Link>
         </div>
     );

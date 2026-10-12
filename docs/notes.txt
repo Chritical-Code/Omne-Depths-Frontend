@@ -4,19 +4,23 @@ MVP - Minimum Viable Product
 
 
 Nows:
-+enable tailwind to use my css variables
+
++make bubbles fit longer text
+-one or two lines?
+-scroll text
+
++get mobile testing up
+-consolidate backend url refs to single file
 
 +search page
 -redesign page
 -find any other problems
 -maybe use this opportunity to write some tests
 
-+make bubbles fit longer text
 
 +topic page
 -redesign page
 -redesign postboxes
--make text fit
 
 
 
