@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-    --primary: rgb(0, 132, 255);
-    --primaryDark: rgb(0, 25, 49);
-    --primaryLight: rgb(157, 208, 255);
+    --od-1: var(--color-od-1);
+    --od-1-dark: var(--color-od-1-dark);
+    --od-1-light: var(--color-od-1-light);
 }
 
 @theme {
-    --primary: var(--primary);
-    --primaryDark: var(--primaryDark);
-    --primaryLight: var(--primaryLight);
+    --color-od-1: rgb(0, 132, 255);
+    --color-od-1-dark: rgb(0, 25, 49);
+    --color-od-1-light: rgb(157, 208, 255);
 }
 
 body {
@@ -26,6 +26,10 @@ body {
 }
 
 @layer components {
+    .od-c-primary{
+        @apply text-[rgb(99,50,198)]
+    }
+
     .btn{
         @apply flex items-center justify-center shrink-0 m-1 border h-10 w-20 
         bg-gray-200 hover:bg-gray-100 hover:border-gray-600 hover:text-gray-600 hover:cursor-pointer

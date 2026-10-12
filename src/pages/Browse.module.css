@@ -6,7 +6,7 @@
     width: 100%;
 
     background-image:   
-    radial-gradient(circle, var(--primary), var(--primaryDark));
+    radial-gradient(circle, var(--color-od-1), var(--color-od-1-dark));
 
     background-position: right;
 }

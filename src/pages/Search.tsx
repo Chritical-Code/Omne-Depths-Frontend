@@ -24,7 +24,7 @@ export default function Search(){
 
     return(
         <div className={browseStyles.oceanBackground}>
-            <p className="font-bold text-blue-200">Topic Search Results:</p>
+            <p className="font-bold text-od-1-light">Topic Search Results:</p>
             {mappedTopics}
         </div>
     );
