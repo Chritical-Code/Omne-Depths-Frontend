@@ -1,0 +1,10 @@
+idea 1
+grow the text box big, but its still centered, and the text is aligned left
+
+
+the text box starts full size... (but wait then text isnt centered small)
+
+
+idea 2: calc
+using math, slide it more depending if its long
+how do we floor() it?

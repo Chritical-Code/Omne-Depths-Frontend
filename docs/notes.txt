@@ -6,7 +6,6 @@ MVP - Minimum Viable Product
 Nows:
 
 +make bubbles fit longer text
--one or two lines?
 -scroll text
 
 +get mobile testing up
