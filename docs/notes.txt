@@ -31,6 +31,7 @@ Futures:
 +add post search
 +add ai disclaimer
 +link back to topic from post
++postbox descriptions overflow currently
 
 
 Visual Improvements

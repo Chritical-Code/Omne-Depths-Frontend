@@ -17,23 +17,62 @@
 .topicText{
     white-space: nowrap;
 
-    animation-name: textScroll;
-    animation-duration: 3s;
+    animation-name: textScroll2;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
+/*non-centered, only long scrolls, snap back*/
 @keyframes textScroll{
     0%{
         transform: translate(0%);
     }
-    25%{
+    20%{
         transform: translate(0%);
     }
-    75%{
-        transform: translate(-50%);
+    80%{
+        transform: translate(min(calc(-100% + 5.25rem), 0px));
     }
     100%{
-        transform: translate(-50%);
+        transform: translate(min(calc(-100% + 5.25rem), 0px));
+    }
+}
+
+/*non-centered, all scroll, bounce back*/
+@keyframes textScroll2{
+    0%{
+        transform: translate(max(0px, calc(-100% + 5.25rem)));
+    }
+    10%{
+        transform: translate(max(0px, calc(-100% + 5.25rem)));
+    }
+    50%{
+        transform: translate(min(calc(-100% + 5.25rem), 0px));
+    }
+    60%{
+        transform: translate(min(calc(-100% + 5.25rem), 0px));
+    }
+    100%{
+        transform: translate(max(0px, calc(-100% + 5.25rem)));
+    }
+}
+
+/*centered, only long scroll, bounce back*/
+@keyframes textScroll3{
+    0%{
+        transform: translate(max(calc((-100% + 5.25rem) / 2), calc(-100% + 5.25rem)));
+    }
+    10%{
+        transform: translate(max(calc((-100% + 5.25rem) / 2), calc(-100% + 5.25rem)));
+    }
+    50%{
+        transform: translate(min(calc(-100% + 5.25rem), calc((-100% + 5.25rem) / 2)));
+    }
+    60%{
+        transform: translate(min(calc(-100% + 5.25rem), calc((-100% + 5.25rem) / 2)));
+    }
+    100%{
+        transform: translate(max(calc((-100% + 5.25rem) / 2), calc(-100% + 5.25rem)));
     }
 }

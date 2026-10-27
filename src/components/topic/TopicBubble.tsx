@@ -9,8 +9,8 @@ type TopicBubbleProps = {
 export default function TopicBubble({topic}: TopicBubbleProps){
     return(
         <div className={styles.topicBubble}>
-            <Link to={"/topic/" + topic.name} className="flex w-9/10 h-9/10 shrink-0 items-center">
-            <div className="flex items-center overflow-hidden">
+            <Link to={"/topic/" + topic.name} className="flex w-9/10 h-9/10 shrink-0 items-center overflow-hidden">
+            <div className="flex items-center">
                 <p className={styles.topicText}>{topic.name}</p>
             </div>
             </Link>
