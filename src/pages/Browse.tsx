@@ -3,6 +3,7 @@ import TopicRow from "../components/topic/TopicRow";
 import topicRowStyles from "../components/topic/TopicRow.module.css";
 import browseStyles from "./Browse.module.css";
 import type {Topic, TopicData} from "@/types/types";
+import { BackendUrls } from "@/misc/BackendUrls";
 
 export default function Browse(){
     const [topics, setTopics] = useState<Topic[]>([{name: "topic", id: -1}]);
@@ -46,7 +47,7 @@ export default function Browse(){
 
 //fetch topics from backend
 async function loadTopics(setTopics: Function){
-    const response = await fetch("http://localhost:8000/topics/");
+    const response = await fetch(BackendUrls.topics);
     const topicData: TopicData = await response.json();
 
     let topics: Topic[] = []

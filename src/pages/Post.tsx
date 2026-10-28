@@ -1,3 +1,4 @@
+import { BackendUrls } from "@/misc/BackendUrls";
 import type { Post } from "@/types/types";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -23,7 +24,7 @@ export default function Post(){
 }
 
 async function loadPost(setPost: Function, postID: string){
-    const response = await fetch("http://localhost:8000/posts/" + postID + "/");
+    const response = await fetch(BackendUrls.posts + postID + "/");
     const postDatum: Post = await response.json();
     setPost(postDatum)
 }

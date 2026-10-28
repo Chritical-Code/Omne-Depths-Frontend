@@ -3,6 +3,7 @@ import type { Topic, TopicData } from "@/types/types";
 import { useEffect, useState } from "react";
 import { useSearchParams } from 'react-router-dom';
 import browseStyles from "./Browse.module.css";
+import { BackendUrls } from "@/misc/BackendUrls";
 
 export default function Search(){
     const [topics, setTopics] = useState<Topic[]>([{name: "topic", id: -1}]);
@@ -32,7 +33,7 @@ export default function Search(){
 
 //fetch topics from backend
 async function loadTopics(setTopics: Function, searchQuery: String,){
-    const response = await fetch("http://localhost:8000/topicsearch/?search=" + searchQuery);
+    const response = await fetch(BackendUrls.search + searchQuery);
     const topicData: TopicData = await response.json();
 
     let topics: Topic[] = []

@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import type { Post, PostData } from "@/types/types";
 import PostBox from "@/components/post/PostBox";
+import { BackendUrls } from "@/misc/BackendUrls";
 
 export default function Topic(){
     const [posts, setPosts] = useState<Post[]>([]);
@@ -40,7 +41,7 @@ export default function Topic(){
 
 // fetch posts from backend
 async function loadPosts(setPosts: Function, topic: string){
-    const response = await fetch("http://localhost:8000/postsbytopic/" + topic + "/");
+    const response = await fetch(BackendUrls.postsByTopic + topic + "/");
     const postData: PostData = await response.json();
 
     let posts: Post[] = []
@@ -53,7 +54,7 @@ async function loadPosts(setPosts: Function, topic: string){
 
 // generate posts at backend
 async function generatePosts(topic: string, setPosts: Function, oldPosts: Post[]){
-    const response = await fetch("http://localhost:8000/generateposts/" + topic + "/");
+    const response = await fetch(BackendUrls.generatePosts + topic + "/");
     const postData: PostData = await response.json();
 
     let newPosts: Post[] = []

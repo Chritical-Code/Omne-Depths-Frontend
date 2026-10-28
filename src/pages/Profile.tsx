@@ -1,3 +1,4 @@
+import { BackendUrls } from "@/misc/BackendUrls";
 import type { Topic, TopicData } from "@/types/types";
 
 export default function Profile(){
@@ -16,7 +17,7 @@ export default function Profile(){
 
 //generate topics at backend
 async function generateTopics(){
-    const response = await fetch("http://localhost:8000/generatetopics/");
+    const response = await fetch(BackendUrls.generateTopics);
     const topicData: TopicData = await response.json();
 
     let topics: Topic[] = []

@@ -5,11 +5,8 @@ MVP - Minimum Viable Product
 
 Nows:
 
-+make bubbles fit longer text
--scroll text
-
 +get mobile testing up
--consolidate backend url refs to single file
+-will probably have to enable wider access on backend
 
 +search page
 -redesign page
@@ -32,7 +29,7 @@ Futures:
 +add ai disclaimer
 +link back to topic from post
 +postbox descriptions overflow currently
-
++implement ideal scrolling text version
 
 Visual Improvements
 +make easy adjust values??
