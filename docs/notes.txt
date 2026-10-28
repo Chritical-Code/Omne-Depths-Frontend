@@ -5,8 +5,19 @@ MVP - Minimum Viable Product
 
 Nows:
 
-+get mobile testing up
--will probably have to enable wider access on backend
++mobile
+-fix top and bottom are plain white
+-fix postboxes are too wide
+-fix short topic scrolls are cutting off too far
+
++url tests
+-refresh basics on tests (different kinds)
+-follow basic test tutorial
+-look at specific test examples
+-make some tests to test url changes automatically
+-test my tests
+-write down a plan to implement tests in previously coded features
+-create a reminder to make a couple tests for new features
 
 +search page
 -redesign page

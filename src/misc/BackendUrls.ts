@@ -1,6 +1,7 @@
 export class BackendUrls{
     // url base
-    public static base = "http://localhost:8000/";
+    //public static base = "http://localhost:8000/";
+    public static base = "http://192.168.1.26:8000/";
     
     // for page data
     public static topics = BackendUrls.base + "topics/";
