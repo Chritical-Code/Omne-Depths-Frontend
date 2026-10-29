@@ -16,10 +16,10 @@ export default function Search(){
 
     const mappedTopics = topics.map((topic) => {
         return(
-            <>
+            <div key={topic.id}>
                 <div className="h-2 w-2 shrink-0"></div>
                 <TopicBubble topic={topic}></TopicBubble>
-            </>
+            </div>
         );
     });
 

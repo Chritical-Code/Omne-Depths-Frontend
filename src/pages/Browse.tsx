@@ -29,9 +29,9 @@ export default function Browse(){
         groupedTopics.push(tempRow);
     }
 
-    const topicRows = groupedTopics.map((topicRow, index) => {
+    const topicRows = groupedTopics.map((topicRow) => {
         return(
-            <TopicRow topics={topicRow} key={index} direction={topicRowStyles.topicRowRight}></TopicRow>
+            <TopicRow topics={topicRow} key={topicRow[0].id} direction={topicRowStyles.topicRowRight}></TopicRow>
         );
     });
     

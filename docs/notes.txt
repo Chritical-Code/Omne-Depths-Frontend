@@ -5,12 +5,9 @@ MVP - Minimum Viable Product
 
 Nows:
 
-+read base url from env file or something
-
 +mobile
 -fix top and bottom are plain white
 -fix postboxes are too wide
--fix short topic scrolls are cutting off too far
 
 +url tests
 -refresh basics on tests (different kinds)
