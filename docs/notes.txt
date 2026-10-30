@@ -7,7 +7,6 @@ Nows:
 
 +mobile
 -fix top and bottom are plain white
--fix postboxes are too wide
 
 +url tests
 -refresh basics on tests (different kinds)

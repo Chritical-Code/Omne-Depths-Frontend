@@ -32,9 +32,11 @@ export default function Topic(){
             
             {postBoxes}
 
-            <button className={`btn w-25 h-15 ${loading ? "opacity-50 cursor-not-allowed" : ""}`} disabled={loading} onClick={() => handleClick()}>
+            <button className={`btn mt-2 w-25 h-15 ${loading ? "opacity-50 cursor-not-allowed" : ""}`} disabled={loading} onClick={() => handleClick()}>
                 {loading ? "Generating..." : "Generate Posts"}
             </button>
+
+            <div className="flex w-1 h-10 shrink-0"></div>
         </div>
     );
 }
