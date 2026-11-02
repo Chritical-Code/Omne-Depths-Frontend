@@ -6,7 +6,9 @@ MVP - Minimum Viable Product
 Nows:
 
 +mobile
--fix top and bottom are plain white
+-fix content being cut off (elegantly)
+
++implement ideal scrolling text version
 
 +url tests
 -refresh basics on tests (different kinds)
@@ -38,7 +40,7 @@ Futures:
 +add ai disclaimer
 +link back to topic from post
 +postbox descriptions overflow currently
-+implement ideal scrolling text version
++optimize animations (many bubbles lag tablet sometimes)
 
 Visual Improvements
 +make easy adjust values??

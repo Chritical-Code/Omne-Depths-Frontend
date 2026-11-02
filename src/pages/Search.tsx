@@ -25,8 +25,11 @@ export default function Search(){
 
     return(
         <div className={browseStyles.oceanBackground}>
-            <p className="font-bold text-od-1-light">Topic Search Results:</p>
-            {mappedTopics}
+            <div className="flex flex-col items-center w-full overflow-y-scroll overflow-x-hidden">
+                <p className="font-bold text-od-1-light">Topic Search Results:</p>
+                {mappedTopics}
+                <div className="flex shrink-0 w-2 h-0"></div>
+            </div>
         </div>
     );
 }
