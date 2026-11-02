@@ -8,7 +8,6 @@ Nows:
 +mobile
 -fix content being cut off (elegantly)
 
-+implement ideal scrolling text version
 
 +url tests
 -refresh basics on tests (different kinds)
@@ -41,6 +40,7 @@ Futures:
 +link back to topic from post
 +postbox descriptions overflow currently
 +optimize animations (many bubbles lag tablet sometimes)
++ensure we chose the correct scrolling text version
 
 Visual Improvements
 +make easy adjust values??

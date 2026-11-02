@@ -17,7 +17,7 @@
 .topicText{
     white-space: nowrap;
 
-    animation-name: textScroll2;
+    animation-name: textScroll3;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -61,10 +61,10 @@
 /*centered, only long scroll, bounce back*/
 @keyframes textScroll3{
     0%{
-        transform: translate(max(calc((-100% + 5.25rem) / 2), calc(-100% + 5.25rem)));
+        transform: translate(max(0px, calc((-100% + 5.25rem) / 2)));
     }
     10%{
-        transform: translate(max(calc((-100% + 5.25rem) / 2), calc(-100% + 5.25rem)));
+        transform: translate(max(0px, calc((-100% + 5.25rem) / 2)));
     }
     50%{
         transform: translate(min(calc(-100% + 5.25rem), calc((-100% + 5.25rem) / 2)));
@@ -73,6 +73,6 @@
         transform: translate(min(calc(-100% + 5.25rem), calc((-100% + 5.25rem) / 2)));
     }
     100%{
-        transform: translate(max(calc((-100% + 5.25rem) / 2), calc(-100% + 5.25rem)));
+        transform: translate(max(0px, calc((-100% + 5.25rem) / 2)));
     }
 }
