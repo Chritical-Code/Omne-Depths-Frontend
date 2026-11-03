@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import type { Post, PostData } from "@/types/types";
 import PostBox from "@/components/post/PostBox";
 import { BackendUrls } from "@/misc/BackendUrls";
+import Gap from "@/components/Gap";
 
 export default function Topic(){
     const [posts, setPosts] = useState<Post[]>([]);
@@ -36,7 +37,7 @@ export default function Topic(){
                 {loading ? "Generating..." : "Generate Posts"}
             </button>
 
-            <div className="flex w-1 h-10 shrink-0"></div>
+            <Gap></Gap>
         </div>
     );
 }

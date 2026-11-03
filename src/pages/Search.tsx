@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from 'react-router-dom';
 import browseStyles from "./Browse.module.css";
 import { BackendUrls } from "@/misc/BackendUrls";
+import Gap from "@/components/Gap";
 
 export default function Search(){
     const [topics, setTopics] = useState<Topic[]>([{name: "topic", id: -1}]);
@@ -28,7 +29,8 @@ export default function Search(){
             <div className="flex flex-col items-center w-full overflow-y-scroll overflow-x-hidden">
                 <p className="font-bold text-od-1-light">Topic Search Results:</p>
                 {mappedTopics}
-                <div className="flex shrink-0 w-2 h-0"></div>
+
+                <Gap></Gap>
             </div>
         </div>
     );

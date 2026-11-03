@@ -4,6 +4,7 @@ import topicRowStyles from "../components/topic/TopicRow.module.css";
 import browseStyles from "./Browse.module.css";
 import type {Topic, TopicData} from "@/types/types";
 import { BackendUrls } from "@/misc/BackendUrls";
+import Gap from "@/components/Gap";
 
 export default function Browse(){
     const [topics, setTopics] = useState<Topic[]>([{name: "topic", id: -1}]);
@@ -39,7 +40,8 @@ export default function Browse(){
         <div className={browseStyles.oceanBackground}>
             <div className="flex flex-col items-center w-full overflow-y-scroll overflow-x-hidden">
                 {topicRows}
-                <div className="w-1 h-22 shrink-0"></div>
+                
+                <Gap></Gap>
             </div>
         </div>
     );

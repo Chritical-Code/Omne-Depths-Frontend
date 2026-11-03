@@ -1,3 +1,4 @@
+import Gap from "@/components/Gap";
 import { BackendUrls } from "@/misc/BackendUrls";
 import type { Post } from "@/types/types";
 import { useEffect, useState } from "react";
@@ -17,7 +18,8 @@ export default function Post(){
                 <p className="font-bold mt-2 text-center">{post?.title}</p>
                 <p className="italic mt-4 text-center">{post?.description}</p>
                 <p className="whitespace-pre-line mt-4">{post?.text}</p>
-                <div className="flex w-10 h-10 shrink-0"></div>
+                
+                <Gap></Gap>
             </div>
         </div>
     );

@@ -1,3 +1,4 @@
+import Gap from "@/components/Gap";
 import { BackendUrls } from "@/misc/BackendUrls";
 import type { Topic, TopicData } from "@/types/types";
 
@@ -11,6 +12,8 @@ export default function Profile(){
         <div className="flex flex-col items-center h-full w-full">
             <p className="">Profile</p>
             <button disabled className="btn w-25 h-15" onClick={() => handleClick()}>Generate Topics</button>
+            
+            <Gap></Gap>
         </div>
     );
 }
