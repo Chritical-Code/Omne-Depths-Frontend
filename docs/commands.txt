@@ -1,0 +1,19 @@
+# common git commands
+git pull
+git add .
+git status
+git commit -m "message"
+git push
+git stash
+
+# run server
+pnpm dev --host
+
+# install packages of the defined versions
+pnpm install
+
+# run tests
+pnpm test
+
+# lint check
+pnpm dlx oxlint --type-aware
