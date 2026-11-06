@@ -9,6 +9,7 @@ Nows:
 
 +url tests
 -vitest first, then React Testing Library
+.left off at https://vitest.dev/guide/learn/writing-tests#skipping-and-focusing-tests
 -refresh basics on tests (different kinds)
 -follow basic test tutorial
 -look at specific test examples
