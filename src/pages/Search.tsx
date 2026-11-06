@@ -12,7 +12,9 @@ export default function Search(){
     const searchQuery = searchParams.get("q") || "";
     
     useEffect(() => {
-        loadTopics(setTopics, searchQuery);
+        loadTopics(setTopics, searchQuery).catch((error: unknown) => {
+            console.error("Failed to load topics:", error);
+        });
     }, [searchQuery]);
 
     const mappedTopics = topics.map((topic) => {
@@ -37,7 +39,7 @@ export default function Search(){
 }
 
 //fetch topics from backend
-async function loadTopics(setTopics: Function, searchQuery: String,){
+async function loadTopics(setTopics: Function, searchQuery: string,){
     const response = await fetch(BackendUrls.search + searchQuery);
     const topicData: TopicData = await response.json();
 

@@ -1,11 +1,11 @@
 import Gap from "@/components/Gap";
-import { BackendUrls } from "@/misc/BackendUrls";
-import type { Topic, TopicData } from "@/types/types";
+//import { BackendUrls } from "@/misc/BackendUrls";
+//import type { Topic, TopicData } from "@/types/types";
 
 export default function Profile(){
     function handleClick(){
         return;
-        generateTopics();
+        //generateTopics();
     }
     
     return(
@@ -18,15 +18,15 @@ export default function Profile(){
     );
 }
 
-//generate topics at backend
-async function generateTopics(){
-    const response = await fetch(BackendUrls.generateTopics);
-    const topicData: TopicData = await response.json();
-
-    let topics: Topic[] = []
-    topicData.results.forEach((topicDatum) => {
-        topics.push(topicDatum);
-    })
-    
-    console.log(topics);
-}
+// generate topics at backend
+//async function generateTopics(){
+//    const response = await fetch(BackendUrls.generateTopics);
+//    const topicData: TopicData = await response.json();
+//
+//    let topics: Topic[] = []
+//    topicData.results.forEach((topicDatum) => {
+//        topics.push(topicDatum);
+//    })
+//    
+//    console.log(topics);
+//}

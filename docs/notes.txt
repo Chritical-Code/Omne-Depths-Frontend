@@ -5,7 +5,10 @@ MVP - Minimum Viable Product
 
 Nows:
 
++fix repeating keys error (check browser console)
+
 +url tests
+-vitest first, then React Testing Library
 -refresh basics on tests (different kinds)
 -follow basic test tutorial
 -look at specific test examples

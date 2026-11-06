@@ -10,7 +10,9 @@ export default function Browse(){
     const [topics, setTopics] = useState<Topic[]>([{name: "topic", id: -1}]);
 
     useEffect(() => {
-        loadTopics(setTopics);
+        loadTopics(setTopics).catch((error: unknown) => {
+            console.error("Failed to load topics:", error);
+        });
     }, []);
 
     //group topics into rows of 3

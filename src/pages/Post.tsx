@@ -9,8 +9,10 @@ export default function Post(){
     const {postID} = useParams();
 
     useEffect(() => {
-                loadPost(setPost, postID ?? "");
-        }, []);
+        loadPost(setPost, postID ?? "").catch((error: unknown) => {
+            console.error("Failed to load post:", error);
+        });
+    }, [postID]);
 
     return(
         <div className="flex flex-col items-center w-full h-full overflow-y-scroll">

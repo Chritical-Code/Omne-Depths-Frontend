@@ -6,14 +6,14 @@ export default function Header(){
     const [searchParams] = useSearchParams();
     const searchQuery = searchParams.get("q") || "";
 
-    function handleSearch(e: React.SubmitEvent<HTMLFormElement>){
+    async function handleSearch(e: React.SubmitEvent<HTMLFormElement>){
         e.preventDefault();
 
         const formData = new FormData(e.currentTarget);
         const searchString = formData.get("q") as string;
 
         if(searchString != ""){
-            navigate("/search?q=" + searchString, {replace:false});
+            await navigate("/search?q=" + searchString, {replace:false});
         }
     }
 

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import TopicAnimator from "./TopicAnimator";
 import styles from "./TopicRow.module.css";
 import type {Topic} from "@/types/types";
@@ -8,28 +9,32 @@ type TopicRowProps = {
 }
 
 export default function TopicRow({topics, direction: slide}: TopicRowProps){
-    // raise topics count to correct number
+    const numTopics = 3;
+    
+    // generate delays so animations are offset
+    const [slideDelay] = useState(() => {return (Math.random() * -20)});
+    const [slideDuration] = useState( () => { return (20 - (Math.random() * 10))});
+    const [bobDelays] = useState(() => {
+        const delays = [];
+        for(let x = 0; x < numTopics; x++){
+            delays.push(Math.random() * -4);
+        }
+        const doubleDelays = [...delays, ...delays]
+        return doubleDelays;
+    });
+
+    // raise topics count to correct amount (because too few doesnt work visually)
     let raisedTopics = [...topics];
-    while(raisedTopics.length < 3){
+    while(raisedTopics.length < numTopics){
         raisedTopics.push(raisedTopics[0]);
     }
     
     // double the array to help simulate round robin
     const doubleTopics = [...raisedTopics, ...raisedTopics];
     
-    // generate delays so animations are offset
-    let bobDelay: number[] = []
-    for(let x = 0; x < doubleTopics.length / 2; x++){
-        bobDelay.push(Math.random() * -4);
-    }
-    bobDelay = [...bobDelay, ...bobDelay];
-
-    const slideDelay: number = Math.random() * -20;
-    const slideDuration: number = 20 - (Math.random() * 10)
-    
     const topicBoxes = doubleTopics.map((topic, index) => {
         return(
-            <TopicAnimator key={topic.id} topic={topic} bobDelay={bobDelay[index]}></TopicAnimator>
+            <TopicAnimator key={topic.id} topic={topic} bobDelay={bobDelays[index]}></TopicAnimator>
         );
     });
     

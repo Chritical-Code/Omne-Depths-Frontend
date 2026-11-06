@@ -11,8 +11,10 @@ export default function Topic(){
     const {topic} = useParams();
 
     useEffect(() => {
-            loadPosts(setPosts, topic ?? "-1");
-    }, []);
+        loadPosts(setPosts, topic ?? "-1").catch((error: unknown) => {
+            console.error("Failed to load posts:", error);
+        });
+    }, [topic]);
 
     async function handleClick(){
         setLoading(true);
