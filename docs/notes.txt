@@ -8,11 +8,8 @@ Nows:
 +fix repeating keys error (check browser console)
 
 +url tests
--vitest first, then React Testing Library
-.left off at https://vitest.dev/guide/learn/writing-tests#skipping-and-focusing-tests
+.left off at https://vitest.dev/guide/learn/async
 -refresh basics on tests (different kinds)
--follow basic test tutorial
--look at specific test examples
 -make some tests to test url changes automatically
 -test my tests
 -write down a plan to implement tests in previously coded features
@@ -41,6 +38,7 @@ Futures:
 +postbox descriptions overflow currently
 +optimize animations (many bubbles lag tablet sometimes)
 +ensure we chose the correct scrolling text version
++learn React Testing Library
 
 Visual Improvements
 +make easy adjust values??
