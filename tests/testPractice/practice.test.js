@@ -18,4 +18,4 @@ describe('Math.sqrt', () => {
     test('returns 0 for 0', () => {
         expect(Math.sqrt(0)).toBe(0);
     });
-})
+});
