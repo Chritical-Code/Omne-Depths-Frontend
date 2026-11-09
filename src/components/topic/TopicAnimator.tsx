@@ -5,12 +5,11 @@ import TopicBubble from "./TopicBubble";
 type TopicAnimatorProps = {
     topic: Topic,
     bobDelay: number,
-    namey: string,
 }
 
-export default function TopicAnimator({topic, bobDelay, namey}: TopicAnimatorProps){
+export default function TopicAnimator({topic, bobDelay}: TopicAnimatorProps){
     return(
-        <div id={namey} className={styles.topicAnimator} style={{"animationDelay": `${bobDelay}s`}}>
+        <div className={styles.topicAnimator} style={{"animationDelay": `${bobDelay}s`}}>
             <TopicBubble topic={topic}></TopicBubble>
         </div>
     );

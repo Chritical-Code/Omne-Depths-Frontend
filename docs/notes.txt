@@ -5,8 +5,6 @@ MVP - Minimum Viable Product
 
 Nows:
 
-+fix repeating keys error (check browser console)
-
 +url tests
 .left off at https://vitest.dev/guide/learn/async
 -refresh basics on tests (different kinds)

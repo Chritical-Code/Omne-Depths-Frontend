@@ -46,7 +46,7 @@ export default function TopicRow({topics, direction: slide}: TopicRowProps){
         }
 
         return(
-            <TopicAnimator namey={outKey} key={outKey} topic={topic} bobDelay={bobDelays[index]}></TopicAnimator>
+            <TopicAnimator key={outKey} topic={topic} bobDelay={bobDelays[index]}></TopicAnimator>
         );
     });
     
