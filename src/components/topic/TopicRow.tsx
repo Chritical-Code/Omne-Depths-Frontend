@@ -25,16 +25,28 @@ export default function TopicRow({topics, direction: slide}: TopicRowProps){
 
     // raise topics count to correct amount (because too few doesnt work visually)
     let raisedTopics = [...topics];
+    let raiseIndex = 0;
     while(raisedTopics.length < numTopics){
-        raisedTopics.push(raisedTopics[0]);
+        raisedTopics.push({...raisedTopics[raiseIndex]});
+        raisedTopics[raiseIndex + 1].id = raisedTopics[raiseIndex + 1].id + "copy"; // helps avoid duplicate keys
+        raiseIndex++;
     }
     
     // double the array to help simulate round robin
     const doubleTopics = [...raisedTopics, ...raisedTopics];
     
     const topicBoxes = doubleTopics.map((topic, index) => {
+        // make a and b key versions, to  avoid duplicate keys
+        let outKey = "";
+        if(index < numTopics){
+            outKey = topic.id + "a";
+        }
+        else {
+            outKey = topic.id + "b";
+        }
+
         return(
-            <TopicAnimator key={topic.id} topic={topic} bobDelay={bobDelays[index]}></TopicAnimator>
+            <TopicAnimator namey={outKey} key={outKey} topic={topic} bobDelay={bobDelays[index]}></TopicAnimator>
         );
     });
     

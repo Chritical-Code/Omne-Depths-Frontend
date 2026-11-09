@@ -7,7 +7,7 @@ import { BackendUrls } from "@/misc/BackendUrls";
 import Gap from "@/components/Gap";
 
 export default function Browse(){
-    const [topics, setTopics] = useState<Topic[]>([{name: "topic", id: -1}]);
+    const [topics, setTopics] = useState<Topic[]>([{name: "topic", id: "filler-topic"}]);
 
     useEffect(() => {
         loadTopics(setTopics).catch((error: unknown) => {
