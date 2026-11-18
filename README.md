@@ -1,3 +1,3 @@
 # Omne Depths
 
-ai generated information to scroll to
+Instead of doomscrolling, why not learn a bit about any topic that piques your interest?
